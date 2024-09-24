@@ -1,0 +1,10 @@
+name: First Workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print name org name
+        run: echo "Capgemini"
+      - name: Print emp shotid
+        run: echo "smarapat"
