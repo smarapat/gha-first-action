@@ -1,10 +1,24 @@
-name: First Workflow
-on: workflow_dispatch
+name: Fetch HTML Data
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  first-job:
+  fetch-html:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print name org name
-        run: echo "Capgemini"
-      - name: Print emp shotid
-        run: echo "smarapat"
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Fetch HTML Data
+        run: |
+          # Use curl to fetch HTML content
+          curl -o output.html https://example.com
+
+      - name: Display HTML Content
+        run: |
+          # Display the fetched HTML
+          cat output.html
