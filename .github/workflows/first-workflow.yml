@@ -11,7 +11,7 @@ jobs:
       - name: Fetch HTML Data
         run: |
           # Use curl to fetch HTML content
-          curl -o output.html https://example.com
+          curl -o output.html https://mcd.jfrog.io/artifactory/gmap-logs-local/iOS/Core/trunk/3226-2/ios-test/report.html 
 
       - name: Display HTML Content
         run: |
