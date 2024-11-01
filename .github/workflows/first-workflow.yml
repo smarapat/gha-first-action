@@ -1,10 +1,5 @@
 name: Fetch HTML Data
-
-on:
-  push:
-    branches:
-      - main
-
+on: workflow_dispatch
 jobs:
   fetch-html:
     runs-on: ubuntu-latest
